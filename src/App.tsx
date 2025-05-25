@@ -57,7 +57,12 @@ function App() {
       </main>
       
       <footer className="App-footer">
-        <p>作者微信：wx1160364001</p>
+        <p>
+          作者微信：wx1160364001 | 
+          <a href="https://github.com/hackyinge/InkSheet" target="_blank" rel="noopener noreferrer">
+            开源地址 @GitHub
+          </a>
+        </p>
       </footer>
     </div>
   );

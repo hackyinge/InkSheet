@@ -134,6 +134,18 @@
 
 .App-footer {
   text-align: center;
-  padding: 0 1rem 1rem 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
   color: #4a5568;
+}
+
+.App-footer a {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.App-footer a:hover {
+  color: #5a67d8;
+  text-decoration: underline;
 } 
