@@ -55,6 +55,10 @@ function App() {
           </div>
         )}
       </main>
+      
+      <footer className="App-footer">
+        <p>作者微信：wx1160364001</p>
+      </footer>
     </div>
   );
 }

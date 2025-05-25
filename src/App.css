@@ -130,4 +130,10 @@
     padding: 0.4rem 0.75rem;
     font-size: 0.9rem;
   }
+}
+
+.App-footer {
+  text-align: center;
+  padding: 0 1rem 1rem 1rem;
+  color: #4a5568;
 } 
