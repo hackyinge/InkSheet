@@ -1,0 +1,358 @@
+.image-editor {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #f7fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.back-button {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  background: #edf2f7;
+  border-color: #a0aec0;
+}
+
+.edit-modes {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-modes button {
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit-modes button.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.edit-modes button:hover:not(.active) {
+  background: #edf2f7;
+  border-color: #a0aec0;
+}
+
+.save-button {
+  padding: 0.5rem 1.5rem;
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.save-button:hover {
+  background: #3182ce;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+.save-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(66, 153, 225, 0.3);
+}
+
+.editor-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.editor-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #f7fafc;
+  position: relative;
+}
+
+.editor-sidebar {
+  width: 320px;
+  background: white;
+  border-left: 1px solid #e2e8f0;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.crop-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.apply-crop-button {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 2rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.apply-crop-button:hover {
+  background: #5a67d8;
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.preview-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.extend-controls {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.extend-controls h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.extend-controls p {
+  color: #718096;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.extend-control-group {
+  margin-bottom: 1.5rem;
+}
+
+.extend-control-group label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.extend-value {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.extend-control-group input[type="range"] {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e2e8f0;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.extend-control-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.extend-control-group input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.extend-control-group input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.apply-extend-button {
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+
+.apply-extend-button:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* 移动设备媒体查询 */
+@media screen and (max-width: 768px) {
+  .image-editor {
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  .editor-toolbar {
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .back-button {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.9rem;
+    order: 1;
+  }
+  
+  .edit-modes {
+    width: 100%;
+    order: 3;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+  }
+  
+  .edit-modes button {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  
+  .save-button {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.9rem;
+    order: 2;
+  }
+  
+  .editor-content {
+    flex-direction: column;
+  }
+  
+  .editor-main {
+    padding: 1rem;
+    height: 50vh;
+  }
+  
+  .editor-sidebar {
+    width: 100%;
+    max-height: 50vh;
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+    padding: 1rem;
+  }
+  
+  .crop-container .apply-crop-button {
+    bottom: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* 梯形校正在移动设备上的调整 */
+  .perspective-correction {
+    flex-direction: column;
+  }
+  
+  .correction-instructions {
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+  
+  .correction-instructions h3 {
+    font-size: 1.2rem;
+  }
+  
+  .correction-instructions p, .correction-instructions ol {
+    font-size: 0.9rem;
+  }
+  
+  .correction-canvas-container {
+    max-height: 60%;
+  }
+  
+  .apply-correction-button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* 滤镜和延展控件在移动设备上的调整 */
+  .filters-panel h3, .extend-controls h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .filter-group, .extend-control-group {
+    margin-bottom: 1rem;
+  }
+  
+  .filter-tip {
+    font-size: 0.8rem;
+  }
+  
+  .reset-button, .apply-extend-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .presets button {
+    padding: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+} 

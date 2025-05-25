@@ -1,0 +1,143 @@
+.image-uploader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.upload-area {
+  background: white;
+  border: 2px dashed #cbd5e0;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  max-width: 600px;
+  width: 100%;
+}
+
+.upload-area:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+}
+
+.upload-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.upload-area h2 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.upload-area p {
+  color: #718096;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-button {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.upload-button:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.upload-tips {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.upload-tips p {
+  font-weight: bold;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.upload-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.upload-tips li {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.upload-tips li:before {
+  content: "•";
+  position: absolute;
+  left: 0.5rem;
+  color: #667eea;
+}
+
+/* 移动设备适配 */
+@media screen and (max-width: 768px) {
+  .image-uploader {
+    min-height: 300px;
+  }
+  
+  .upload-area {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .upload-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .upload-area h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .upload-area p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .upload-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    width: 80%;
+  }
+  
+  .upload-tips {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .upload-tips p {
+    font-size: 0.9rem;
+  }
+  
+  .upload-tips li {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+} 
