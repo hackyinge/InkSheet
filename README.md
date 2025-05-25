@@ -3,6 +3,7 @@
 一个基于 React + TypeScript 的试卷图像处理应用，专门用于处理拍照模糊的试卷图片，提供裁切、字迹增强、梯形校正、图像延展等功能。
 
 ## 功能特性
+![image](https://github.com/user-attachments/assets/5fc45eef-77d4-4ee8-8613-171a4bd4e95d)
 
 ### 1. 图片上传
 - 支持多种上传方式：
@@ -10,17 +11,20 @@
   - 拖拽上传
   - 粘贴截图（Ctrl+V）
 - 支持常见图片格式：JPG、PNG、WEBP 等
+![image](https://github.com/user-attachments/assets/05908c80-c79b-4f8c-b8e5-ff7db09ce8f6)
 
 ### 2. 图片裁切
 - 使用 Cropper.js 实现精确裁切
 - 可自由调整裁切区域
 - 实时预览裁切效果
+![image](https://github.com/user-attachments/assets/39b7bf11-517b-428d-b53c-9abcb5266e67)
 
 ### 3. 梯形校正
 - 针对拍照角度倾斜的试卷进行透视矫正
 - 可视化调整四个角点（按住并拖动控制点）
 - 自动将倾斜的试卷转换为正矩形
 - 支持触摸设备操作，移动端友好
+![image](https://github.com/user-attachments/assets/6c7d6ce7-3e3c-4108-9c7b-6b4845e8bb8c)
 
 ### 4. 字迹增强
 - **亮度调节**：调整图片整体亮度（0-200%）
@@ -30,6 +34,7 @@
 - **清晰度增强**：使用USM锐化算法提高细节清晰度（0-100%）
 - **饱和度调整**：控制图像色彩鲜艳程度（0-200%）
 - **伽马校正**：调整暗部细节显示（0.5-1.5）
+![image](https://github.com/user-attachments/assets/67a3276e-fa02-4da7-9488-f1fbec871685)
 
 ### 5. 图像延展
 - 支持四个方向独立控制延展像素
@@ -41,6 +46,11 @@
 - **字迹加深**：适合字迹较淡的图片
 - **强力清晰**：适合严重模糊的图片
 - **黑白文档**：将图片转换为高对比度黑白效果，适合纯文字文档
+
+ 原图
+![微信图片_20250524114152](https://github.com/user-attachments/assets/e9e0a88b-e4e8-4183-b461-d57f809b2876)
+处理后
+![processed_exam_1748155133326](https://github.com/user-attachments/assets/6bba3143-a5eb-44fa-a5a0-a53053e8e195)
 
 ### 7. 图片下载
 - 处理后的图片可直接下载
