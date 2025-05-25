@@ -519,7 +519,7 @@ const PerspectiveCorrection: React.FC<PerspectiveCorrectionProps> = ({ imageUrl,
         <h3>梯形校正</h3>
         <p>拖动四个角点来调整试卷的透视变形，使其变为正矩形</p>
         <ol>
-          <li>按住并拖动角点进行调整</li>
+          <li>按住并拖动角点进行调整（空白部分可双指缩放）</li>
           <li>确保四个角点覆盖试卷的四个角</li>
           <li>点击"应用校正"完成透视矫正</li>
         </ol>
